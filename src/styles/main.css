@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: center; /* Centra los hijos verticalmente */
+}
+
+.image-container {
+  position: relative;
+  width: 80vw; /* Cambiado para dar más espacio en dispositivos más amplios */
+  max-width: 500px;
+  overflow: hidden;
+  text-align: center; /* Asegura que los contenidos estén centrados horizontalmente */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.centered-text {
+  font-family: "Playball", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: calc(1.5em + 3vw);
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ... Tu código previo ... */
+
+.dishes-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 900px;
+  margin-top: -40px; /* Ajusta este valor según cuánto quieras mover el contenedor hacia arriba */
+  flex-wrap: wrap;
+}
+
+/* Estilo para todos los enlaces dentro de dishes-container */
+.dishes-container a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Toma el color del elemento padre */
+}
+
+/* Estilo para todos los enlaces visitados dentro de dishes-container */
+.dishes-container a:visited {
+  color: inherit; /* Evita el color morado de enlaces visitados */
+}
+
+/* Estilo para el hover, focus y active de todos los enlaces dentro de dishes-container */
+.dishes-container a:hover,
+.dishes-container a:focus,
+.dishes-container a:active {
+  color: inherit; /* Mantiene el color original */
+  text-decoration: none; /* Elimina el subrayado en hover, focus y active */
+}
+
+/* Si tienes algún div específico o clase dentro de dishes-container que no quieres que se vea afectada, 
+puedes anular los estilos con selectores más específicos. */
+
+.dish {
+  font-family: "Ranchers", cursive;
+
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2em;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 10px;
+  width: 400px;
+  height: 200px; /* Puedes ajustar estos valores de width y height según lo necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dish:hover {
+  background-color: #333;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.dish-image {
+  width: 200px; /* Define un tamaño fijo para la imagen */
+  height: 100%; /* Asegurándote de que todas las imágenes se ajusten a este tamaño */
+}
+
+/* ... Tus media queries ... */
+
+/* Media query para tablets */
+@media (max-width: 768px) {
+  .image-container {
+    width: 90vw;
+  }
+
+  .centered-text {
+    font-size: calc(1.2em + 2.5vw);
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+  .image-container {
+    width: 100vw;
+  }
+
+  .centered-text {
+    font-size: calc(3em + 2vw);
+  }
+}

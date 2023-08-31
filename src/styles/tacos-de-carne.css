@@ -1,0 +1,138 @@
+/* ======= Configuraciones Base ======= */
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 40px 0;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* ======= Estilos de Componentes Específicos ======= */
+
+.recipe-content {
+  background: #1a1a1a;
+  padding: 20px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 800px;
+  transition: transform 0.2s;
+}
+.recipe-content li {
+  font-family: "Lato", sans-serif; /* Cambiado a Lato */
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+.recipe-content:hover {
+  transform: scale(1.02);
+}
+
+.recipe-image {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.recipe-content h1,
+.recipe-content h2 {
+  font-family: "Ranchers", cursive;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.recipe-content h1 {
+  font-size: 2.8em;
+}
+
+.recipe-content h2 {
+  font-size: 1.8em;
+}
+
+.recipe-content ul,
+.recipe-content ol {
+  padding-left: 20px;
+}
+
+.recipe-content li {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+/* ======= Media Queries ======= */
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .recipe-content {
+    padding: 15px 15px;
+  }
+
+  .recipe-content h1 {
+    font-size: 2.3em;
+  }
+
+  .recipe-content h2 {
+    font-size: 1.5em;
+  }
+
+  .recipe-content li {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recipe-content {
+    width: 90%;
+  }
+
+  .recipe-content h1 {
+    font-size: 2em;
+  }
+
+  .recipe-content h2 {
+    font-size: 1.4em;
+  }
+
+  .recipe-content li {
+    font-size: 0.9em;
+  }
+}
+
+/* ======= Personalización de Scrollbar ======= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
