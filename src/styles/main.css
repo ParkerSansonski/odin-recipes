@@ -1,5 +1,8 @@
+/* ======= Importaciones de Fuentes ======= */
 @import url("https://fonts.googleapis.com/css2?family=Playball&family=Roboto:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+
+/* ======= Configuraciones Base ======= */
 body {
   margin: 0;
   padding: 0;
@@ -9,15 +12,16 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  justify-content: center; /* Centra los hijos verticalmente */
+  justify-content: center;
 }
 
+/* ======= Estilos de Componentes Específicos ======= */
 .image-container {
   position: relative;
-  width: 80vw; /* Cambiado para dar más espacio en dispositivos más amplios */
+  width: 80vw;
   max-width: 500px;
   overflow: hidden;
-  text-align: center; /* Asegura que los contenidos estén centrados horizontalmente */
+  text-align: center;
 }
 
 .image-container img {
@@ -43,42 +47,33 @@ body {
   text-overflow: ellipsis;
 }
 
-/* ... Tu código previo ... */
-
 .dishes-container {
   display: flex;
   justify-content: center;
   width: 80%;
   max-width: 900px;
-  margin-top: -40px; /* Ajusta este valor según cuánto quieras mover el contenedor hacia arriba */
+  margin-top: -40px;
   flex-wrap: wrap;
 }
 
-/* Estilo para todos los enlaces dentro de dishes-container */
 .dishes-container a {
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  color: inherit; /* Toma el color del elemento padre */
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Estilo para todos los enlaces visitados dentro de dishes-container */
 .dishes-container a:visited {
-  color: inherit; /* Evita el color morado de enlaces visitados */
+  color: inherit;
 }
 
-/* Estilo para el hover, focus y active de todos los enlaces dentro de dishes-container */
 .dishes-container a:hover,
 .dishes-container a:focus,
 .dishes-container a:active {
-  color: inherit; /* Mantiene el color original */
-  text-decoration: none; /* Elimina el subrayado en hover, focus y active */
+  color: inherit;
+  text-decoration: none;
 }
-
-/* Si tienes algún div específico o clase dentro de dishes-container que no quieres que se vea afectada, 
-puedes anular los estilos con selectores más específicos. */
 
 .dish {
   font-family: "Ranchers", cursive;
-
   background-color: #1a1a1a;
   border-radius: 10px;
   text-align: center;
@@ -86,7 +81,7 @@ puedes anular los estilos con selectores más específicos. */
   transition: background-color 0.3s, transform 0.3s;
   margin: 10px;
   width: 400px;
-  height: 200px; /* Puedes ajustar estos valores de width y height según lo necesites */
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -100,13 +95,11 @@ puedes anular los estilos con selectores más específicos. */
 }
 
 .dish-image {
-  width: 200px; /* Define un tamaño fijo para la imagen */
-  height: 100%; /* Asegurándote de que todas las imágenes se ajusten a este tamaño */
+  width: 200px;
+  height: 100%;
 }
 
-/* ... Tus media queries ... */
-
-/* Media query para tablets */
+/* ======= Media Queries ======= */
 @media (max-width: 768px) {
   .image-container {
     width: 90vw;
@@ -117,7 +110,6 @@ puedes anular los estilos con selectores más específicos. */
   }
 }
 
-/* Media query para dispositivos móviles */
 @media (max-width: 480px) {
   .image-container {
     width: 100vw;

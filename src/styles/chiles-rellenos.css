@@ -5,17 +5,39 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-
 body {
   margin: 0;
-  padding: 40px 0;
+  padding: 0;
   background-color: #0a0a0a;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow-x: hidden;
+  justify-content: center;
+}
+
+/* ======= Encabezado ======= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.header .left, .header .right {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header .left:hover {
+  color: #fff;
 }
 
 /* ======= Estilos de Componentes Específicos ======= */
@@ -29,8 +51,9 @@ body {
   max-width: 800px;
   transition: transform 0.2s;
 }
+
 .recipe-content li {
-  font-family: "Lato", sans-serif; /* Cambiado a Lato */
+  font-family: "Lato", sans-serif;
   margin: 8px 0;
   font-size: 1.1em;
   color: #b0b0b0;
@@ -42,9 +65,9 @@ body {
 }
 
 .recipe-image {
-  width: 100%;
-  max-width: 450px;
-  margin: 20px auto;
+  width: 50%;
+  max-width: 200px;
+  margin: 0px auto;
   border-radius: 15px;
   display: block;
 }
@@ -80,7 +103,7 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    padding: 20px 0;
+    padding: 140px 0;
   }
 
   .recipe-content {
@@ -121,7 +144,7 @@ body {
 /* ======= Personalización de Scrollbar ======= */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
